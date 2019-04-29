@@ -33,10 +33,6 @@ header nav a {
   text-decoration: none;
 }
 
-.main-container {
-  margin-top: 100px;
-}
-
 .main-container .hero {
   text-align: center;
   padding: 5vw;
@@ -92,26 +88,19 @@ h2 {
   padding: 3rem 0rem;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.what-we-do .wwd-item {
-  margin: 2rem 2rem 0 0;
-  width: 30%;
-}
-
-.what-we-do .wwd-item .features,
-.what-we-do .wwd-item .about {
-  width: 45%;
-  margin: 0 2rem 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-gap: 20px;
 }
 
 .what-we-do img.middle-img {
   width: 100%;
+  grid-column: 1/-1;
 }
 
 .contact-container {
@@ -132,37 +121,25 @@ footer {
   .hero-image {
     display: none;
   }
-  nav {
-    padding: 2rem 5vw;
-    background-color: #e9f5ff;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    top: 0;
-    height: 100px;
+  header {
     grid-gap: 10px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
   }
-  nav img {
+  header img {
     grid-column: 1/-1;
     -ms-grid-row: 1;
     grid-row: 1;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
 /* MEDIA QUERIES MObile */
-@media only screen and (max-width: 500px) {
-  nav {
-    padding: 2rem 5vw;
-    background-color: #e9f5ff;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    top: 0;
+@media only screen and (max-width: 600px) {
+  header {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -170,12 +147,15 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: center;
+    width: 100%;
   }
-  nav img {
+  header nav a {
     grid-column: 1/-1;
-    -ms-grid-row: 1;
-    grid-row: 1;
+    text-align: center;
+    border: 2px solid gray;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    margin-right: unset;
   }
 }
 /*# sourceMappingURL=index.css.map */
