@@ -98,6 +98,18 @@ h2 {
   grid-gap: 20px;
 }
 
+.what-we-do section {
+  grid-column: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .what-we-do img.middle-img {
   width: 100%;
   grid-column: 1/-1;
