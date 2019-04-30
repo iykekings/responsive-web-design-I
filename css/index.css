@@ -1,3 +1,173 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Your code starts here! */
+header {
+  z-index: 999;
+  top: 0;
+  background-color: #e9f5ff;
+  padding: 2rem 5vw;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 
+header nav a {
+  color: grey;
+  margin-right: 5vw;
+  text-decoration: none;
+}
+
+.main-container .hero {
+  text-align: center;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .hero .hero-text {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .hero .hero-image {
+  width: 45%;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: calc(1rem + 1vw);
+}
+
+.btn {
+  text-decoration: none;
+  color: #000000;
+  border: 2px solid black;
+  padding: 2px 2rem;
+}
+
+.what-we-do {
+  margin: 5vw;
+  padding: 3rem 0rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-gap: 20px;
+}
+
+.what-we-do section {
+  grid-column: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.what-we-do img.middle-img {
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.contact-container {
+  margin: 0 5vw;
+  width: 15%;
+}
+
+.contact-container p {
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+}
+
+/* MEDIA QUERIES Tablet */
+@media only screen and (max-width: 1024px) {
+  .hero-image {
+    display: none;
+  }
+  header {
+    grid-gap: 10px;
+  }
+  header img {
+    grid-column: 1/-1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+/* MEDIA QUERIES MObile */
+@media only screen and (max-width: 600px) {
+  header {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  header nav a {
+    grid-column: 1/-1;
+    text-align: center;
+    border: 2px solid gray;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    margin-right: unset;
+  }
+}
+/*# sourceMappingURL=index.css.map */
